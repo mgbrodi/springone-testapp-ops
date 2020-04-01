@@ -1,0 +1,11 @@
+
+images:
+  - name: mgbrodi/springone-testapp  # used for Kustomize matching
+    newName: mgbrodi/springone-testapp # CHANGE
+    newTag: 1.0.1
+configMapGenerator:
+  - name: springone-testapp-configmap-env  # naming convention for reference
+    envs:
+      - env.properties
+resources:
+  - ../../base
